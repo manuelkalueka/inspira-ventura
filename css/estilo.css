@@ -1,0 +1,37 @@
+@charset "UTF-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-Regular.ttf");
+}
+
+:root {
+  --azul: #539ddb;
+  --azul-escuro-destaque: rgb(9, 75, 132);
+  --branco: #fff;
+  --preto: #1a1818;
+  --cinza: #ccc;
+
+  --font-principal: "Montserrat", sans-serif;
+
+  --radio: 0.375em;
+  --tamanho-texto: 16px;
+}
+
+img {
+  width: 100%;
+}
+
+a:active,
+button:active {
+  transition: all 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  transform: scale(0.9);
+}

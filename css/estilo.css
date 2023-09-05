@@ -229,10 +229,35 @@ h2.title {
   border-radius: 100%;
 }
 
-.back-to-top {
+.back-to-top {/*Tornar Suave O Evento do Botao to Top*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: sticky;
+  left: 90%;
+  bottom: 5%;
   width: 5rem;
   height: 5rem;
   background-color: var(--azul);
+
+  border-radius: 100%;
+  opacity: 0.7;
+  transition: opacity 1s ease-out;
+}
+
+.back-to-top:hover {
+  opacity: 1;
+  transition: opacity 2s ease-in-out;
+}
+
+.back-to-top a {
+  padding: 20%;
+}
+
+.back-to-top i {
+  font-size: 1.8rem;
+  color: var(--azul-escuro-destaque);
 }
 @keyframes spin {
   0% {

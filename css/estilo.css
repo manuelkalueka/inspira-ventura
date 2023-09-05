@@ -38,6 +38,15 @@ h2 {
   color: var(--azul-escuro-destaque);
 }
 
+section {
+  display: flex;
+  width: 100%;
+}
+
+p {
+  line-height: 1.5;
+}
+
 html {
   font-size: var(
     --tamanho-texto
@@ -128,7 +137,6 @@ span.login-section {
 }
 
 .banner-container {
-  display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -141,7 +149,22 @@ span.login-section {
 
 h2.title-banner {
   font-size: 4rem;
-  text-shadow: 0 0 10px rgb(255, 255, 255);
+  text-shadow: 0 0 0.25rem rgb(255, 255, 255);
+  margin-bottom: 2.8rem;
+}
+
+.desc-banner {
+  max-width: 940px;
+  padding: 1.3rem;
+
+  font-size: 1.4rem;
+  text-align: center;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.19);
+
+  color: var(--azul);
+
+  background-color: rgba(255, 255, 255, 0.336);
+  backdrop-filter: blur(0.2rem);
 }
 
 .loader-container {
@@ -161,7 +184,7 @@ h2.title-banner {
 .loader {
   width: 5rem;
   height: 5rem;
-  
+
   border-right: 0.3rem solid var(--azul-escuro-destaque);
   border-bottom: 0.3rem solid var(--azul-escuro-destaque);
   border-radius: 100%;
@@ -169,6 +192,48 @@ h2.title-banner {
   animation: spin 2s linear infinite;
 }
 
+.content {
+  flex-direction: row-reverse;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.separador {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  margin-left: 2.5rem;
+}
+
+h2.title {
+  text-align: right;
+  margin-bottom: 2rem;
+}
+
+.description {
+  max-width: 40rem;
+  text-align: justify;
+}
+
+.images {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50rem;
+}
+
+.img {
+  height: 80%;
+  border-radius: 100%;
+}
+
+.back-to-top {
+  width: 5rem;
+  height: 5rem;
+  background-color: var(--azul);
+}
 @keyframes spin {
   0% {
     transform: rotate(0deg);

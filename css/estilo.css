@@ -34,10 +34,8 @@ a {
   color: inherit;
 }
 
-html,
-body {
-  width: 100vw;
-  height: 100vh;
+h2 {
+  color: var(--azul-escuro-destaque);
 }
 
 html {
@@ -51,21 +49,27 @@ body {
   color: var(--preto);
 }
 
+.container {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
 .header {
+  position: absolute;
+  top: 0;
+  left: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
 
   width: 100%;
-  padding: 1% 5%;
-
-  background-color: var(--azul);
-
-  background-image: url('../img/spa-banner.jpg');
+  padding: 0.5% 5%;
+  background-color: rgba(83, 158, 219, 0.198);
+  backdrop-filter: blur(10px);
 }
 
 .logo-container {
-  width: 8rem;
+  width: 7.8rem;
 }
 
 .logo-container .logo-img {
@@ -93,12 +97,12 @@ body {
 }
 
 .links {
-  padding: 0.7rem;
+  padding: 0.6rem;
   color: var(--branco);
 }
 
 .links:not(.signup):hover {
-  /*Melhora o Hover*/
+  /*Melhorar o Hover*/
   color: var(--azul-escuro-destaque);
   text-decoration: underline;
 
@@ -120,4 +124,21 @@ span.login-section {
   color: var(--azul);
 
   transition: 1.5s cubic-bezier(0.165, 0.84, 0.44, 1) all;
+}
+
+.banner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  background-image: url(../img/banner.png);
+  background-size: cover;
+  min-height: 100vh;
+  color: #fff;
+}
+
+h2.title-banner {
+  font-size: 4rem;
+  text-shadow: 0 0 10px rgb(255, 255, 255);
 }

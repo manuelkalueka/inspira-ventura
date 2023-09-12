@@ -192,10 +192,23 @@ h2.title-banner {
   animation: spin 2s linear infinite;
 }
 
-.content {
+.wrap-content {
+  flex-direction: column;
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+}
+
+.tips {
+  display: flex;
   flex-direction: row-reverse;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-top: 1rem;
+}
+
+.tips:nth-child(even) {
+  background-color: var(--azul);
 }
 
 .separador {
@@ -203,7 +216,6 @@ h2.title-banner {
   flex-direction: column;
   justify-content: center;
   align-items: flex-end;
-  margin-left: 2.5rem;
 }
 
 h2.title {
@@ -211,17 +223,25 @@ h2.title {
   margin-bottom: 2rem;
 }
 
+.tips:nth-child(even) h2.title {
+  color: var(--branco);
+}
+
 .description {
   max-width: 40rem;
   text-align: justify;
 }
 
-.images {
+.tips:nth-child(even) .description {
+  color: #e0e0e0;
+}
+
+.wrap-image {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 50rem;
+  max-width: 35rem;
+  height: 35rem;
 }
 
 .img {
@@ -229,7 +249,8 @@ h2.title {
   border-radius: 100%;
 }
 
-.back-to-top {/*Tornar Suave O Evento do Botao to Top*/
+.back-to-top {
+  /*Tornar Suave O Evento do Botao to Top*/
   display: flex;
   justify-content: center;
   align-items: center;

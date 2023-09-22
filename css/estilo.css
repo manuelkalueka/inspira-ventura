@@ -143,7 +143,7 @@ span.login-section {
   flex-direction: column;
   background-image: url(../img/banner.png);
   background-size: cover;
-  min-height: 100vh;
+  height: 150vh;
   color: #fff;
 }
 
@@ -194,7 +194,6 @@ h2.title-banner {
 
 .wrap-content {
   flex-direction: column;
-  padding-top: 1.5rem;
   padding-bottom: 1rem;
 }
 
@@ -203,11 +202,13 @@ h2.title-banner {
   flex-direction: row-reverse;
   justify-content: space-between;
   align-items: center;
+}
 
+.tips:not(.tips-top) {
   margin-top: 1rem;
 }
 
-.tips:nth-child(even) {
+.tips:nth-child(odd) {
   background-color: var(--azul);
 }
 
@@ -219,11 +220,14 @@ h2.title-banner {
 }
 
 h2.title {
-  text-align: right;
   margin-bottom: 2rem;
 }
 
-.tips:nth-child(even) h2.title {
+.tips h2.title {
+  text-align: right;
+}
+
+.tips:nth-child(odd) h2.title {
   color: var(--branco);
 }
 
@@ -232,7 +236,8 @@ h2.title {
   text-align: justify;
 }
 
-.tips:nth-child(even) .description {
+.tips:nth-child(odd) .description {
+  /*estiliza as descrições das tips impares*/
   color: #e0e0e0;
 }
 
@@ -249,8 +254,167 @@ h2.title {
   border-radius: 100%;
 }
 
+.calling {
+  padding-top: 8%;
+  padding-bottom: 10%;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--azul);
+  color: var(--branco);
+}
+
+.call-desc {
+  text-align: justify;
+  max-width: 80%;
+}
+
+.call-button {
+  background-color: var(--branco);
+  color: var(--azul-escuro-destaque);
+  margin-top: 1rem;
+  padding: 0.625rem;
+
+  border-radius: var(--radio);
+
+  font-weight: 700;
+}
+
+.call-button:hover {
+  transform: scale(1.1);
+  transition: transform 2s ease-in-out;
+}
+
+.newsletter {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+
+  padding-top: 8%;
+  padding-bottom: 10%;
+}
+
+.newsletter h2.title {
+  margin-bottom: 1rem;
+}
+
+.newsletter h2.title::after {
+  content: "";
+  display: block;
+  background-color: var(--azul-escuro-destaque);
+  margin: 0.4rem auto 0;
+  width: 6.25rem;
+  height: 0.25rem;
+}
+
+.newsletter label {
+  position: absolute;
+  left: -99999999px;
+}
+.newsletter p {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  color: var(--azul-escuro-destaque);
+}
+
+button,
+input[type="text"],
+input[type="email"] {
+  outline: 0;
+  border: 0;
+}
+
+.news-form {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.newsletter .input {
+  width: 25%;
+  border: 0.0625rem solid var(--azul-escuro-destaque);
+  font-size: 1.3rem;
+  border-top-left-radius: var(--radio);
+  border-bottom-left-radius: var(--radio);
+}
+
+.news-form .button {
+  width: 10%;
+  background-color: var(--azul-escuro-destaque);
+  color: var(--branco);
+
+  font-size: 1.3rem;
+  border-top-right-radius: var(--radio);
+  border-bottom-right-radius: var(--radio);
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+.input::placeholder {
+  font-size: 1rem;
+}
+
+.input,
+.button {
+  padding: 15px 5px;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 30vh;
+  background-color: var(--azul-escuro-destaque);
+  color: var(--cinza);
+}
+
+.footer-logo {
+  font-size: 1.5rem;
+}
+
+.footer-elements {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.footer-elements > span {
+  margin-top: 1.5rem;
+  font-style: italic;
+}
+
+.social-cont {
+  display: flex;
+  flex-direction: column;
+  max-width: 10rem;
+}
+
+.social-title {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 1.2rem;
+}
+
+.social {
+  margin: auto;
+}
+
+.social .social-item {
+  font-size: 1.5rem;
+  padding: 0.625rem;
+  display: inline-block;
+}
+
+.social-item:hover {
+  color: var(--branco);
+  transition: color 2s ease-out;
+}
+
 .back-to-top {
-  /*Tornar Suave O Evento do Botao to Top*/
+  /*Tornar Suave O  do Botao to Top*/
   display: flex;
   justify-content: center;
   align-items: center;
@@ -280,6 +444,7 @@ h2.title {
   font-size: 1.8rem;
   color: var(--azul-escuro-destaque);
 }
+
 @keyframes spin {
   0% {
     transform: rotate(0deg);

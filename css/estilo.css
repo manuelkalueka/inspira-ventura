@@ -53,6 +53,10 @@ html {
   ); /*Definindo a fonte no ROOT ou elemento raiz*/
 }
 
+.hide {
+  display: none;
+}
+
 body {
   font-family: var(--font-principal);
   color: var(--preto);
@@ -90,19 +94,16 @@ body {
 }
 
 .drop-container {
-  position: relative;
-  display: none;
+  position: absolute;
+  margin-top: 1rem;
+  padding: 0.3rem 0.5rem;
+  background-color: rgba(83, 158, 219, 0.25);
+  backdrop-filter: blur(10px);
+  border-radius: var(--radio);
 }
 
 .drop-item {
-  position: absolute;
-  display: block;
-  margin-top: 5%;
-  padding: 0.2rem 0.3rem;
-}
-
-.drop-item:nth-child(2) {
-  margin-top: 35%;
+  margin-bottom: 1rem;
 }
 
 .links {

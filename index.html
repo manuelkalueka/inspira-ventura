@@ -32,7 +32,11 @@
             </a>
         </h1>
 
-        <nav>
+        <nav class="menu-container">
+            <div class="drop-btn">
+                <input type="checkbox" id="check-menu" class="hide">
+                <label for="check-menu"><i class="fa fa-bars"></i></label>
+            </div>
             <ul class="menu-nav">
                 <li class="menu-item">
                     <a href="index.html" class="links" target="_self">Início</a>
@@ -171,9 +175,6 @@
         </form>
     </section>
 
-    <!-- <div class="back-to-top">
-        <a href="#body"><i class="fa-solid fa-arrow-up"></i></a>
-    </div> -->
     <footer class="footer container">
         <p class="footer-logo"> &copy;InspiraVida Ventures</p>
         <div class="footer-elements">
@@ -203,6 +204,11 @@
             </div>
         </div>
     </footer>
+
+    <button type="button" class="back-to-top" id="btn-top" title="Voltar ao Topo">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
     <script src="scripts/index.js" defer></script>
 </body>
 

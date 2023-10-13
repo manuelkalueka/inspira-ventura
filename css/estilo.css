@@ -27,7 +27,7 @@
 }
 
 img {
-  width: 100%;
+  max-width: 100%;
 }
 
 a {
@@ -51,6 +51,7 @@ html {
   font-size: var(
     --tamanho-texto
   ); /*Definindo a fonte no ROOT ou elemento raiz*/
+  scroll-behavior: smooth; /*Rola para o top de forma suav*/
 }
 
 .hide {
@@ -144,6 +145,7 @@ span.login-section {
   flex-direction: column;
   background-image: url(../img/banner.png);
   background-size: cover;
+  background-position: top center;
   height: 150vh;
   color: #fff;
 }
@@ -169,15 +171,13 @@ h2.title-banner {
 }
 
 .loader-container {
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: fixed;
   width: 100%;
   height: 100%;
   display: flex;
-  justify-content: center;
   align-items: center;
-  z-index: 9999;
+  justify-content: center;
+  z-index: 1000;
 
   background-color: var(--branco);
 }
@@ -191,6 +191,14 @@ h2.title-banner {
   border-radius: 100%;
 
   animation: spin 2s linear infinite;
+}
+
+.drop-btn label {
+  display: none;
+
+  padding: 0.6rem;
+  color: var(--azul-escuro-destaque);
+  font-size: 2rem;
 }
 
 .wrap-content {
@@ -251,6 +259,7 @@ h2.title {
 }
 
 .img {
+  width: 100%;
   height: 80%;
   border-radius: 100%;
 }
@@ -380,6 +389,7 @@ input[type="email"] {
 .footer-elements {
   display: flex;
   flex-direction: column-reverse;
+  align-items: end;
 }
 
 .footer-elements > span {
@@ -415,13 +425,12 @@ input[type="email"] {
 }
 
 .back-to-top {
+  display: none;
+  border: none;
+  outline: none;
   /*Tornar Suave O  do Botao to Top*/
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  position: sticky;
-  left: 90%;
+  position: fixed;
+  right: 5%;
   bottom: 5%;
   width: 5rem;
   height: 5rem;
@@ -430,15 +439,13 @@ input[type="email"] {
   border-radius: 100%;
   opacity: 0.7;
   transition: opacity 1s ease-out;
+
+  cursor: pointer;
 }
 
 .back-to-top:hover {
   opacity: 1;
   transition: opacity 2s ease-in-out;
-}
-
-.back-to-top a {
-  padding: 20%;
 }
 
 .back-to-top i {
@@ -452,5 +459,39 @@ input[type="email"] {
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 865px) {
+  .menu-nav {
+    display: none;
+    flex-direction: column;
+    background-color: rgba(83, 158, 219, 0.25);
+  }
+
+  .menu-item {
+    margin-top: 1rem;
+  }
+
+  .drop-btn label {
+    display: inline;
+
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 960px) {
+  h2.title-banner {
+    font-size: calc(4rem - 1rem);
+  }
+}
+
+@media (max-width: 1235px) {
+  .img {
+    max-height: 55%;
+  }
+
+  .description {
+    margin-left: 2.5rem;
   }
 }

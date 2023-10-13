@@ -345,9 +345,13 @@ input[type="email"] {
 .newsletter .input {
   width: 25%;
   border: 0.0625rem solid var(--azul-escuro-destaque);
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   border-top-left-radius: var(--radio);
   border-bottom-left-radius: var(--radio);
+}
+
+.newsletter .input.erro {
+  border-color: #e76060;
 }
 
 .news-form .button {

@@ -74,3 +74,30 @@ window.onscroll = () => {
 
 btnTop.addEventListener('click', backToTopScroll)
 
+
+document.querySelector('form.news-form').addEventListener('submit', (evento) => {
+    assinarNewLetter()
+    evento.preventDefault();
+});
+
+
+function assinarNewLetter() {
+    validarEmail();
+}
+
+function validarEmail() {
+
+    const erros = [];
+    const emailElement = document.querySelector('#news-input')
+    const emailValue = emailElement.value;
+
+    if (emailValue == '') {
+        erros.push('Preecha o campo email');
+        emailElement.classList.add('erro')
+        alert(erros[0])
+        emailElement.focus()
+        return;
+    }
+
+    alert('Assinou nossa newsLetter com Sucesso :)')
+}

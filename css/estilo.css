@@ -535,7 +535,6 @@ input[type="email"] {
 }
 
 @media (max-width: 960px) {
-
   h2.title {
     font-size: 1rem;
   }
@@ -564,6 +563,7 @@ input[type="email"] {
   }
 
   .footer-logo {
+    margin-top: 2rem;
     margin-bottom: 2rem;
   }
 
